@@ -120,6 +120,32 @@ Later we'll see how to connect multiple recipes to the same ingredients.
 
 ## Additional Resources
 
+Imagine we have filling cabinets and paper spreadsheets instead of a digital
+database. You're tasked with assembling information from two paper spreadsheets.
+You have a sheet of authors with ids and a sheet of books with author_ids. You
+must answer the question: "Which books were written by either Ernest Hemingway
+or Shirley Jackson?".
+
+You first take the sheet with authors, find the each author and note their ids
+on a third sheet. Then, you look at the books sheet and scan for Hemingway's id
+to appear as author id. Each time you come across a matching row, you write all
+the data from the books sheet, along with Hemingway's name, on your third sheet.
+Then you repeat the process again for Jackson.
+
+When you're done, you have a third sheet that's an artifact of the process. It
+can be recreated at any time by following the steps you just went through. You
+take your two original sheets and put them back in the filing cabinet for the
+next person to use.
+
+The process of collating the information from each of the two sheets to the
+third is called a JOIN, and that's why our join clause matches the id from one
+table with the foreign key from another.
+
+The resulting third sheet can be called a report, and it represents a particular
+presentation of data from two different tables. When we run queries, we generate
+reports. The viewing of data and storing of data in SQL are different. The
+report is not a table, and the table is not a report.
+
 -   [Constraints](http://www.postgresql.org/docs/9.5/static/ddl-constraints.html) -
  An overview of the variety of constraints that PostgreSQL provides.
 -   [CREATE TABLE](http://www.postgresql.org/docs/9.5/static/sql-createtable.html) -
