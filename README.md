@@ -9,7 +9,8 @@ We'll begin to cover the topic of "relationships" in database terms now.
 
 ## Prerequisites
 
--   [An introduction to relational databases](https://github.com/ga-wdi-boston/sql-crud)
+-   [An introduction to relational
+    databases](https://github.com/ga-wdi-boston/sql)
 
 ## Objectives
 
