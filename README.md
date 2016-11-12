@@ -71,25 +71,29 @@ Can you give an example of when this convention isn't appropriate?
 
 We'll create scripts in `scripts/library` to
 
--   reference the `id` column of the `authors` table from the `books` table.
+-   on the `books` table, add a reference to the `id` column of the `authors`
+    table.
 -   populate the author reference in the `books` table.
 -   remove the `author` column from the books table.
+
+Note that references may constrain both the referenced and referencing table.
 
 ### Code along: Add a doctor reference to patients
 
 We'll create scripts in `scripts/clinic` to
 
--   reference the `id` column of the `doctors` table from the `patients` table.
+-   on the `patients` table, add a reference to the `id` column of the
+    `doctors` table.
 -   populate the doctor reference in the `patients` table for a few patients.
 
 ### Lab: Add a recipe reference to ingredients
 
 We'll create scripts in `scripts/cookbook` to
 
--   reference the `id` column of the `recipes` table from the `ingredients`
- table.
+-   on the ingredients table, add a reference to the id column of the recipes
+    table.
 -   populate the recipe reference in the `ingredients` table for a few
- ingredients.
+    ingredients.
 
 Does this relationship seem adequate for handling actual recipes?  Why or why
 not?
