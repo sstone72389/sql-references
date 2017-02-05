@@ -36,7 +36,7 @@ How might we do that?
 
 **developers**
 
-| id | given_name | surname  | favorite language |
+| id | given_name | family_name  | favorite language |
 |:--:|:----------:|:--------:|:-----------------:|
 |  1 | Antony     | Donovan  | C                 |
 |  2 | Jason      | Weeks    | JavaScript        |
@@ -325,7 +325,7 @@ SELECT c.name, COUNT(*)
 We could also look at people born in a particular city.
 
 ```sql
-SELECT p.given_name, p.surname
+SELECT p.given_name, p.family_name
   FROM people p
   INNER JOIN cities c ON p.born_in_id = c.id
     WHERE c.name = 'Somerville'
@@ -344,7 +344,7 @@ To get a list of all people, along with their address and city,
 we could write
 
 ```sql
-SELECT p.surname, p.given_name, a.name AS street
+SELECT p.family_name, p.given_name, a.name AS street
   FROM people p
   INNER JOIN addresses a  ON p.address_id = a.id
 ;
